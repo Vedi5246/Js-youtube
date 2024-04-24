@@ -40,4 +40,26 @@ console.log(typeof outideTemp);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
+//++++++++++++++++++++++++++++++++++++++++++++++
 
+// Stack (Primitive Data types), Heap (Non-Primitive)
+
+let myYoutubename = "naveed@google.com"
+
+let anotherName = myYoutubename
+anotherName = "barakah@google.com"
+// console.log(anotherName, myYoutubename);
+
+
+let userOne = {
+    name : "Naveed",
+    email: "naveed@hotmail.com"
+
+}
+
+let userTwo = userOne
+
+userTwo.email = "aryan@outlook.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
