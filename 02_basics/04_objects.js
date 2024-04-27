@@ -7,6 +7,7 @@ tinderUser.isLoggedIn = false
 
 // console.log(tinderUser);
 
+//objects inside object
 const regularUser = {
     email: "user@google.com",
     fullname: {
@@ -22,11 +23,42 @@ const regularUser = {
 
 const obj1 = {1: 'a', 2: 'b'}
 const obj2 = {3: 'c', 4: 'd'}
+const obj4 = {5: 'a', 6: 'b'}
 
 // const obj3 = {obj1, obj2} // this syntax is not used
-
-const obj3 = Object.assign({}, obj1, obj2)
+//to combine objects this syntax is used
+// const obj3 = Object.assign({}, obj1, obj2, obj4)
 // the empty curly braces are optional,
-//it just ensures the all the values will be combined 
+//it just ensures that all the values will be combined 
 //and result will be the same
-console.log(obj3);
+
+
+//but we will use this syntax commonly(spread operator)
+const obj3 = {...obj1, ...obj2, ...obj4}
+
+
+// console.log(obj3);
+
+//there is another syntax which is used when values are returned from database
+
+const users = [
+    {
+        id: '1@gmail.com'
+    },
+    {
+        id: '1@gmail.com'
+    },
+    {
+        id: '1@gmail.com'
+    }
+]
+
+users[1].email
+
+console.log(tinderUser);
+
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+
+console.log(tinderUser.hasOwnProperty('name'));
